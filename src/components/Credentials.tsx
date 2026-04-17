@@ -49,6 +49,7 @@ export default function Credentials() {
       issuer: 'INSTITUTO MEMAKER',
       date: 'Out 2024',
       skills: ['Soft Skills'],
+      link: 'https://drive.google.com/file/d/1zqLNf0gMnwkPDTOZbTbbbaEgZC7Yhyeh/view?usp=sharing',
       icon: <Award className="text-purple-400" />
     }
   ];
