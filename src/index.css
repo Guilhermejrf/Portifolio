@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-purple-950: #0a0510;
+  --color-purple-900: #150b25;
+  --color-purple-800: #2a1b3d;
+  --color-purple-700: #3c2a4d;
+  --color-purple-600: #7b2cbf;
+  --color-purple-500: #9d4edd;
+  --color-purple-400: #c77dff;
+  --color-purple-accent: #e0aaff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-purple-950 text-white selection:bg-purple-500/30 font-sans antialiased;
+  }
+}
+
+.glass {
+  background: rgba(21, 11, 37, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(157, 78, 221, 0.2);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-purple-accent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-purple-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-800 rounded-full hover:bg-purple-500 transition-colors;
+}
